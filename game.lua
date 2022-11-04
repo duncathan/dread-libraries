@@ -246,3 +246,213 @@ function Game.Deserialize(...) end
 ---@param param1 boolean
 function Game.DestroyCurrentScenario(param1) end
 
+---UNKNOWN
+function Game.DisableAttacks() end
+
+---UNKNOWN
+function Game.EnableAttacks() end
+
+---UNKNOWN
+function Game.DisableCheckerTextures() end
+
+---UNKNOWN
+function Game.EnableCheckerTextures() end
+
+---Resets bEnabled on the given entity
+---@param entity entityID
+function Game.DisableEntity(entity) end
+
+---Sets bEnabled on the given entity
+---@param entity entityID
+function Game.EnableEntity(entity) end
+
+---Resets bEnabled on the given component
+---@param entity entityID
+---@param component componentID
+function Game.DisableEntityComponent(entity, component) end
+
+---Sets bEnabled on the given component
+---@param entity entityID
+---@param component componentID
+function Game.EnableEntityComponent(entity, component) end
+
+---UNKNOWN
+function Game.DisableMipmapTextures() end
+
+---UNKNOWN
+function Game.EnableMipmapTextures() end
+
+---UNKNOWN
+---@param param1 string
+function Game.DisableSpawnGroup(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.EnableSpawnGroup(param1) end
+
+---Executes a lua file
+---@param file string A file path, starting from romfs root. Use the `.lua` file extension even for `.lc` files.
+function Game.DoFile(file) end
+
+---Dummied.
+---@return unknown # I think this is bugged? It indicates that it pushed one value, but it definitely does not do that
+---@deprecated
+function Game.EnableClipPlane() end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableCulling(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableDebugMinimap(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableDroppedItemsAttraction(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableEnvironmentMusic(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableEnvironmentMusicSoundEffects(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableEnvironmentSounds(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+---@param param2 string
+function Game.EnableMinimap(param1, param2) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableMusic(param1) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 integer
+---@param param3 float
+function Game.EnableReverb(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 boolean
+---@param param2 integer
+function Game.EnableSceneDraw(param1, param2) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.EnableSFX(param1) end
+
+---UNKNOWN
+function Game.EndMetrics() end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.Exists(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.ExistsLogicCamera(param1) end
+
+---Dummied.
+---@deprecated
+function Game.ExportPackAnyTimeReferencedFilesPfg() end
+
+---Appears to always return false.
+---@return boolean
+---@deprecated
+function Game.ExtraDebugAllowed() end
+
+---Dummied.
+---@deprecated
+function Game.FactorizerTest() end
+
+---Fades in the game screen after a fade out.
+---@param param1 float Unknown. Usually set to 0.1
+---@param fadetime float Duration of the fade, in seconds
+function Game.FadeIn(param1, fadetime) end
+
+---Fades out the game screen.
+---@param fadetime float Duration of the fade, in seconds
+function Game.FadeOut(fadetime) end
+
+---Fades out something. Background?
+---@param fadetime float Duration of the fade, in seconds
+function Game.FadeOutBG(fadetime) end
+
+---Fades out something. Music?
+---@param fadetime float Duration of the fade, in seconds
+function Game.FadeOutStreamSound(fadetime) end
+
+---UNKNOWN. Difficult to read
+---@param ... unknown
+---@return unknown
+function Game.FindInGameNodeValue(...) end
+
+---Sets the player to Samus, even if morphed.
+function Game.ForceConvertToSamus() end
+
+---UNKNOWN
+function Game.ForceDistributeAttackers() end
+
+---Forces the entity's map icon (if any) to be visible on the map
+---@param entity entityID
+function Game.ForceEntityIconVisible(entity) end
+
+---UNKNOWN
+function Game.ForceSkipCutscene() end
+
+---UNKNOWN
+function Game.FormatSavedGames() end
+
+---Dummied. :(
+---@deprecated
+function Game.FreeCameraAllowed() end
+
+---UNKNOWN
+function Game.GainAllItemsAndPowerUps() end
+
+---UNKNOWN
+function Game.GainCentralUnitSpbSprWeapon() end
+
+---UNKNOWN
+function Game.GameCleared() end
+
+---Dummied.
+---@deprecated
+function Game.GenerateAllNavMesh() end
+
+---UNKNOWN
+function Game.GenerateEnemiesNavMeshDataAndSave() end
+
+---UNKNOWN
+function Game.GenerateIniFromConfigMenu() end
+
+---UNKNOWN
+function Game.GenerateMissingTunables() end
+
+---UNKNOWN
+function Game.GenerateNavMesh() end
+
+---UNKNOWN
+function Game.GenerateNavMeshAndSave() end
+
+---UNKNOWN
+function Game.GenerateNavMeshDynamicSmartLinkRules() end
+
+---UNKNOWN
+function Game.GenerateNavMeshLogicShapesEdges() end
+
+---UNKNOWN
+function Game.GenerateNavMeshLogicShapesValidPoints() end
+
+---UNKNOWN
+function Game.GenerateNavMeshZones() end
+
+-- TODO: `Get` onwards
