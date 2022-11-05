@@ -1045,4 +1045,195 @@ function Game.IncrementNavMeshGeneratorDebugBreakableTileIndex() end
 ---UNKNOWN
 function Game.InitSaveData() end
 
--- TODO: `Is` onward
+---Dummied.
+---@deprecated
+function Game.IsAppBrightnessInitialized() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsAttackLocked() end
+
+---UNKNOWN
+---@param param1 integer
+---@return boolean
+function Game.IsCommitedGameMovie(param1) end
+
+---UNKNOWN
+---@return boolean
+function Game.IsCutscenePlaying() end
+
+---UNKNOWN. Seemingly useless
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsDebug() return false end
+
+---Dummied.
+---@deprecated
+function Game.IsDebugFlagActive() end
+
+---@alias button "L1" | "L2" | "R1" | "R2" | "CROSS" | "TRIANGLE" | "SQUARE" | "CIRCLE"
+
+---Returns whether the indicated button is currently being held.
+---Notice that it uses Playstation buttons and is pretty limited.
+---**Recommend using the `Input` library's patched implementation of this function instead.**
+---@param button button
+---@return boolean
+---@deprecated
+function Game.IsDebugPagButtonPressed(button) end
+
+---UNKNOWN
+---@return boolean
+function Game.IsDroppedItemsAttractionEnabled() end
+
+---Presumably does what it says on the tin. Unclear which order the arguments are in.
+---@param param1 entityID
+---@param param2 entityID
+---@return boolean
+function Game.IsEntityInsideTrigger(param1, param2) end
+
+---UNKNOWN
+---@return boolean
+function Game.IsEnvironmentMusicEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsEnvironmentSoundEffectsEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsEnvironmentSoundEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsFadingPending() end
+
+---Dummied.
+---@deprecated
+function Game.IsForceRoundRobinForNonCulledEntities() end
+
+---Returns whether cutscene force skipping has been enabled.
+---@return boolean
+---@see Game.SetForceSkipCutscenes
+function Game.IsForceSkipCutscenes() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsFreeCamLockSubAreasEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsGameCompleted() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsGameModeChangePending() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsGamePaused() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsInAttractMode() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsInFadeOut() end
+
+---Returns whether the game is a release build. Useless for modders.
+---@return boolean # Always `true`
+---@deprecated
+function Game.IsInFINAL() return true end
+
+---UNKNOWN
+---@return boolean
+function Game.IsInGameMusicStateLocked() end
+
+---Interestingly isn't dummied, but is useless.
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsInPS3() return false end
+
+---Interestingly isn't dummied, but is useless.
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsInSteam() return false end
+
+---Interestingly isn't dummied, but is useless.
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsInSTEAM_PC_FINAL_RETAIL() return false end
+
+---Interestingly isn't dummied, but is useless.
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsInVerticalMode() return false end
+
+---Interestingly isn't dummied, but is useless.
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsInWIN32() return false end
+
+---Interestingly isn't dummied, but is useless.
+---@return boolean # Always `false`
+---@deprecated
+function Game.IsInXBOX() return false end
+
+---UNKNOWN
+---@return boolean
+function Game.IsLoadingScenario() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsLoadingScenarioPending() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsLoadingScreenActive() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsMinimapEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsMusicEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsMusicPlaying() end
+
+---Seems to be bugged. Do not use.
+---@deprecated
+function Game.IsPackedVersion() end
+
+---UNKNOWN
+---@param param1 integer
+---@return boolean
+function Game.IsPlayingGameMovie(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.IsPlayingPreset(param1) end
+
+---UNKNOWN
+---@return boolean
+function Game.IsReverbEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsSaveDataBusy() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsSaveDataInDummyMode() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsSFXEnabled() end
+
+---UNKNOWN
+---@return boolean
+function Game.IsVibrationAvailableFromSystem() end
+
