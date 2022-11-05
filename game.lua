@@ -52,9 +52,10 @@ function Game.AddLifePctToEntity(entity, pct) end
 ---UNKNOWN
 function Game.ApplySettingsFromProfileBlackboard() end
 
----UNKNOWN. This may always return false
----@return boolean
-function Game.AreHeadphonesPlugged() end
+---UNKNOWN. Seemingly useless
+---@return boolean # Always `false`
+---@deprecated
+function Game.AreHeadphonesPlugged() return false end
 
 ---UNKNOWN
 ---@return boolean
@@ -185,8 +186,9 @@ function Game.DebugGetStreamVolumeFromData(param1) end
 
 ---UNKNOWN
 ---@param param1 string
----@param param2 float | boolean
-function Game.DebugSetStreamVol(param1, param2) end
+---@param param2 float
+---@param param3 boolean?
+function Game.DebugSetStreamVol(param1, param2, param3) end
 
 ---Dummied.
 ---@deprecated
@@ -195,7 +197,7 @@ function Game.DebugHelp() end
 ---Mostly indistinguishable from LoadScenario? But sets an offset to 1
 ---@param level levelid
 ---@param scenario scenarioid
----@param startpoint string
+---@param startpoint spawnpoint
 ---@param player string
 ---@param param5 integer
 ---@see Game.LoadScenario
@@ -291,7 +293,7 @@ function Game.DisableSpawnGroup(param1) end
 function Game.EnableSpawnGroup(param1) end
 
 ---Executes a lua file
----@param file string A file path, starting from romfs root. Use the `.lua` file extension even for `.lc` files.
+---@param file path
 function Game.DoFile(file) end
 
 ---Dummied.
@@ -364,10 +366,10 @@ function Game.ExistsLogicCamera(param1) end
 ---@deprecated
 function Game.ExportPackAnyTimeReferencedFilesPfg() end
 
----Appears to always return false.
----@return boolean
+---UNKNOWN. Seemingly useless
+---@return boolean # Always `false`
 ---@deprecated
-function Game.ExtraDebugAllowed() end
+function Game.ExtraDebugAllowed() return false end
 
 ---Dummied.
 ---@deprecated
@@ -455,4 +457,592 @@ function Game.GenerateNavMeshLogicShapesValidPoints() end
 ---UNKNOWN
 function Game.GenerateNavMeshZones() end
 
--- TODO: `Get` onwards
+---Returns the actor with the given sName, if it currently exists/is loaded
+---@param name entityID
+---@return Actor|nil
+function Game.GetActor(name) end
+
+---Returns the actor's components, if the actor exists/is loaded
+---@param name entityID
+---@return table<componentID, table>|nil
+function Game.GetActorComponents(name) end
+
+---Returns the variables for the given component, if the actor exists/is loaded and has the component 
+---@param name entityID
+---@param component componentID
+---@return table<string, any>|nil
+function Game.GetActorComponentVariables(name, component) end
+
+---Returns the actor's vPos
+---@param name entityID
+---@return vector3|nil
+function Game.GetActorPosition(name) end
+
+---UNKNOWN. Hard to read
+---@param ... unknown
+---@return unknown
+function Game.GetAIBlcProp(...) end
+
+---Dummied.
+---@deprecated
+function Game.GetAppGraphicsCfg() end
+
+---Dummied.
+---@deprecated
+function Game.GetAppLanguageCfg() end
+
+---Dummied.
+---@deprecated
+function Game.GetAppScreenCfg() end
+
+---UNKNOWN
+---@return string
+function Game.GetAvailableMusicStreams() end
+
+---UNKNOWN
+---@return GameObjectType|nil
+function Game.GetBoss() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetBreakableTileWeaponHitLocked() end
+
+---UNKNOWN
+---@return GameObjectType|nil
+function Game.GetCamera() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@return unknown
+function Game.GetCameraCtrlValue(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@return table
+function Game.GetCameraCtrlValues(param1) end
+
+---UNKNOWN
+---@return table
+function Game.GetCameraValues() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetCaptionsAllowed() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetControlledAI() end
+
+---Returns whether the ZDR Cooldown flag is enabled
+---@return boolean
+function Game.GetCooldownFlag() end
+
+---UNKNOWN
+---@return string
+function Game.GetCurrentCutsceneStr() end
+
+---UNKNOWN
+---@return integer
+function Game.GetCurrentCutsceneTakeCount() end
+
+---UNKNOWN
+---@return integer
+function Game.GetCurrentCutsceneTakeIndex() end
+
+---UNKNOWN. May be dummied/useless?
+---@return float
+function Game.GetCurrentEnvMultiplier() end
+
+---Returns the current game mode ID
+---@return gamemodeid
+function Game.GetCurrentGameModeID() end
+
+---Returns the previous game mode ID
+---@return gamemodeid
+function Game.GetPreviousGameMode() end
+
+---Returns the currently enabled language
+---@return string
+function Game.GetCurrentLanguage() end
+
+---UNKNOWN
+---@return string
+function Game.GetCurrentLanguageSuffix() end
+
+---Returns the current loaded subarea ID
+---@return string
+function Game.GetCurrentSubAreaId() end
+
+---UNKNOWN
+---@param param1 string
+---@return GameObjectType
+function Game.GetCutsceneEntity(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return GameObjectType
+function Game.GetCutsceneEntityLike(param1) end
+
+---Returns a reference to Samus (not morphed) if she exists
+---@return Actor|nil
+function Game.GetDefaultPlayer() end
+
+---Returns a reference to Morph Ball if she exists
+---@return Actor|nil
+function Game.GetSecondaryPlayer() end
+
+---Returns a reference to the current player, morphed or otherwise
+---@return Actor|nil
+function Game.GetPlayer() end
+
+---Returns the default player name
+---@return string # Always `"Samus"`
+function Game.GetDefaultPlayerName() return "Samus" end
+
+---Dummied.
+---@deprecated
+function Game.GetDefaultVideoModeIdx() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetDoubleJump() end
+
+---UNKNOWN
+---@return integer
+function Game.GetDroppedItemAttractionAcceleration() end
+
+---@alias entityTable table<entityID, actordef>
+
+---Returns a table mapping all loaded entities to their actordef
+---@return entityTable
+function Game.GetEntities() end
+
+---Returns an entity table for all loaded entities whose positions are inside the given trigger's logicshape
+---@return entityTable
+function Game.GetEntitiesInsideTrigger(trigger) end
+
+---Returns the actor associated with the given spawnpoint ID
+---@param spawn spawnpoint
+---@return Actor
+function Game.GetEntityFromSpawnPoint(spawn) end
+
+---UNKNOWN
+---@param param1 string
+---@return table
+function Game.GetFileInfo(param1) end
+
+---UNKNOWN
+---@param param1 actordef
+---@return Actor
+function Game.GetFirstAliveInstanceOfCharClass(param1) end
+
+---UNKNOWN
+---@param param1 actordef
+---@return Actor
+function Game.GetFirstInstanceOfCharClass(param1) end
+
+---UNKNOWN
+---@return boolean
+function Game.GetFixedStepTime() end
+
+---Useless.
+---@return string # Always `""`
+---@deprecated
+function Game.GetForcedTooltip() return "" end
+
+---UNKNOWN. Probably stick to the real blackboard funcs
+---@param param1 string
+---@return boolean
+---@deprecated
+function Game.GetFromGameBlackboard(param1) end
+
+---What it says on the tin. Probably stick to the real blackboard funcs
+---@param section string
+---@param prop string
+---@return boolean|float|integer
+function Game.GetFromGameBlackboardSection(section, prop) end
+
+---UNKNOWN. Not dummied. Likely a useless leftover from SR
+---@return boolean
+function Game.GetGameCompletedOnRidleyDead() end
+
+---Returns the current difficulty mode
+---@return game_difficulty
+function Game.GetGameDifficulty() end
+
+---UNKNOWN
+---@return float
+function Game.GetGameTimeStamp() end
+
+---UNKNOWN. Why does it return a float?
+---@return float
+function Game.GetGravitySuitOn() end
+
+---UNKNOWN. Why does it return a float?
+---@return float
+function Game.GetHyperSuitOn() end
+
+---UNKNOWN. Why does it return a float?
+---@return float
+function Game.GetVariaSuitOn() end
+
+---UNKNOWN. May be useless
+---@return float
+function Game.GetHeadphonesMultiplier() end
+
+---Returns the amount of the given item id in the player's inventory
+---@param playername string # Use `Game.GetPlayerName()` for this
+---@param item_id string # Inventory ID
+---@return number
+function Game.GetItemAmount(playername, item_id) end
+
+---Dummied.
+---@deprecated
+function Game.GetKeyboardCurrentCfg() end
+
+---Dummied.
+---@deprecated
+function Game.GetKeyboardPresetCfg() end
+
+---UNKNOWN. Presumably returns a vAng
+---@param param1 string
+---@return vector3
+function Game.GetLandmarkOrientation(param1) end
+
+---UNKNOWN. Presumably returns a vPos
+---@param param1 string
+---@return vector3
+function Game.GetLandmarkPosition(param1) end
+
+---UNKNOWN
+---@return vector3
+function Game.GetLastCutsceneCameraDir() end
+
+---UNKNOWN
+---@return float
+function Game.GetLastCutsceneCameraFOV() end
+
+---UNKNOWN
+---@return vector3
+function Game.GetLastCutsceneCameraPos() end
+
+---UNKNOWN
+---@return integer
+function Game.GetLowPassFilterCutOff() end
+
+---UNKNOWN
+---@return float
+function Game.GetMasterVolume() end
+
+---UNKNOWN
+---@return table
+function Game.GetMenuDebugFlags() end
+
+---Dummied.
+---@deprecated
+function Game.GetMinimapAreaGameProgress() end
+
+---Returns a CMinimapManager
+---@return GameObjectType
+function Game.GetMinimapManager() end
+
+---UNKNOWN
+---@return float
+function Game.GetMusicInMenuMultiplier() end
+
+---UNKNOWN. Why is it a bool?
+---@return boolean
+function Game.GetMusicVolume() end
+
+---UNKNOWN
+---@return integer
+function Game.GetNavMeshGeneratorDebugBreakableTileIndex() end
+
+---UNKNOWN. Seemingly useless
+---@param param1 string
+---@return string # Always `""`
+function Game.GetNextForcedTooltip(param1) end
+
+---UNKNOWN. Seemingly useless
+---@param param1 string
+---@return string # Always `""`
+function Game.GetPrevForcedTooltip(param1) end
+
+---UNKNOWN
+---@param param1 actordef
+---@return integer
+function Game.GetNumberOfAliveInstancesOfCharClass(param1) end
+
+---UNKNOWN
+---@return string
+function Game.GetPadFocusedDeviceInfo() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetPerformanceInfoEnabled() end
+
+---UNKNOWN
+---@return table
+function Game.GetPlayerAbilityStatus() end
+
+---Returns the name of the player blackboard section
+---@return string # Always `"PLAYER"`
+function Game.GetPlayerBlackboardSectionName() return "PLAYER" end
+
+---UNKNOWN. Looks possibly useful
+---@return table
+function Game.GetPlayerCurrentModeGuns() end
+
+---UNKNOWN
+---@return table
+function Game.GetPlayerEnergyStatus() end
+
+---UNKNOWN
+---@return GameObjectType
+function Game.GetPlayerInfo() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetPlayerLifeLocked() end
+
+---UNKNOWN
+---@return float
+function Game.GetPlayerMaxLifeOverride() end
+
+---Returns the current player's entity ID
+---@return entityID|nil
+function Game.GetPlayerName() end
+
+---UNKNOWN
+---@return table
+function Game.GetPlayerSpecialEnergyStatus() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetPostProcessEnabled() end
+
+---UNKNOWN
+---@param param1 string
+---@return string
+function Game.GetProfileDescription(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return string
+function Game.GetProfileName(param1) end
+
+---UNKNOWN
+---@return integer
+function Game.GetRequiredDiskSpaceKB() end
+
+---@alias RevealTilesMode "AnyWeaponButBeams" | "AnyWeapon"
+---Returns the current reveal tiles mode
+---@return RevealTilesMode
+function Game.GetRevealTilesMode() end
+
+---UNKNOWN
+---@return integer
+function Game.GetReverbConfig() end
+
+---UNKNOWN
+---@return float
+function Game.GetSafeFarPlaneFactor() end
+
+---UNKNOWN
+---@return integer
+function Game.GetSamusWalkMode() end
+
+---Returns the blackboard section for the given scenario. Usually identical to the scenario ID
+---@param scenario scenarioid
+---@return string
+function Game.GetScenarioBlackboardSectionID(scenario) end
+
+---Returns the current scenario ID
+---@return scenarioid
+function Game.GetScenarioID() end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.GetSceneGroupEnabledByName(param1) end
+
+---UNKNOWN
+---@return GameObjectType
+function Game.GetSelectedAI() end
+
+---UNKNOWN
+---@return table
+function Game.GetSelecetedAIAttacks() end
+
+---UNKNOWN. Seemingly useless
+---@return boolean # Always `false`
+---@deprecated
+function Game.GetSetFrontByPass() return false end
+
+---UNKNOWN
+---@return table
+function Game.GetSetSurroundPan() end
+
+---UNKNOWN
+---@return float
+function Game.GetSFXVolume() end
+
+---UNKNOWN
+---@return float
+function Game.GetSoundListenerFactor() end
+
+---@alias soundmode "STEREO" | "SURROUND" | "MONO"
+
+---UNKNOWN
+---@return soundmode
+function Game.GetSoundMode() end
+
+---UNKNOWN
+---@return boolean
+function Game.GetSpaceJump() end
+
+---UNKNOWN
+---@param param1 string
+---@return table
+function Game.GetSpawnGroupEntities(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return table
+function Game.GetSpawnGroupSpawnPointsInfo(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return float
+function Game.GetStat(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return GameObjectType
+function Game.GetTarget(param1) end
+
+---UNKNOWN
+---@return table
+function Game.GetTeleportLocations() end
+
+---UNKNOWN
+---@return float
+function Game.GetTimeStamp() end
+
+---UNKNOWN
+---@return integer
+function Game.GetTotalGameProgress() end
+
+---UNKNOWN
+---@return float
+function Game.GetTotalPlayTime() end
+
+---UNKNOWN
+---@return userdata # Appears to be a `base::global::CRntSmallDictionary<base::global::CRntString, base::tunable::CTunablePtr>`
+function Game.GetTunables() end
+
+---Dummied.
+---@deprecated
+function Game.GetVideoModes() end
+
+---Returns to the main menu.
+function Game.GoToMainMenu() end
+
+---Dummied.
+---@deprecated
+function Game.GoToStateItemSpecialAbilities() end
+
+---Dummied.
+---@deprecated
+function Game.GoToStateItemStatus() end
+
+---UNKNOWN. Here's my best guess:
+---```
+---function Game.HasEntityComponent(entity, component)
+---    local oActor = Game.GetActor(entity)
+---    return oActor ~= nil and oActor[component] ~= nil
+---end
+---```
+---@param entity entityID
+---@param component componentID
+---@return boolean
+function Game.HasEntityComponent(entity, component)
+    local oActor = Game.GetActor(entity)
+    return oActor ~= nil and oActor[component] ~= nil
+end
+
+---Equivalent to `Game.GetItemAmount(player, item_id) > 0`
+---@param player entityID
+---@param item_id string
+---@return boolean
+function Game.HasItem(player, item_id) end
+
+---UNKNOWN
+function Game.HideFPS() end
+
+---UNKNOWN
+function Game.HideScenario() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+---@param param3 boolean?
+function Game.HideScenarioItemByName(param1, param2, param3) end
+
+---UNKNOWN
+function Game.HideSubtitiles() end
+
+---UNKNOWN. Worth investigating. Seems strangely similar to `GUI.ShowMessage`
+---@param param1 string
+---@param param2 boolean
+---@param param3 string
+---@return boolean
+function Game.HUDShowMessage(param1, param2, param3) end
+
+---UNKNOWN
+function Game.IgnoreCamoEndDetectionCountdown() end
+
+---UNKNOWN
+---@param param1 string
+function Game.ImpactPlayerLeft(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.ImpactPlayerRight(param1) end
+
+---UNKNOWN
+function Game.ImpactPlayerLeftEmmyWave() end
+
+---UNKNOWN
+function Game.ImpactPlayerRightEmmyWave() end
+
+---UNKNOWN
+function Game.ImpactPlayerLeftIce() end
+
+---UNKNOWN
+function Game.ImpactPlayerRightIce() end
+
+---In some way executes/imports the provided lua file. Unclear exactly how it works
+---@param path path
+---@param param2 boolean?
+function Game.ImportLibrary(path, param2) end
+
+---In some way executes/imports the provided lua file. Unclear exactly how it works
+---@param path path
+---@param name string
+---@param param3 boolean?
+function Game.ImportLibraryWithName(path, name, param3) end
+
+---Leftover from SR.
+---@param param1 integer
+---@deprecated
+function Game.IncrementMetroidTotalCount(param1) end
+
+---UNKNOWN
+function Game.IncrementNavMeshGeneratorDebugBreakableTileIndex() end
+
+---UNKNOWN
+function Game.InitSaveData() end
+
+-- TODO: `Is` onward
