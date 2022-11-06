@@ -53,7 +53,7 @@ function Game.AddLifePctToEntity(entity, pct) end
 function Game.ApplySettingsFromProfileBlackboard() end
 
 ---UNKNOWN. Seemingly useless
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.AreHeadphonesPlugged() return false end
 
@@ -198,7 +198,7 @@ function Game.DebugHelp() end
 ---@param level levelid
 ---@param scenario scenarioid
 ---@param startpoint spawnpoint
----@param player string
+---@param player ""
 ---@param param5 integer
 ---@see Game.LoadScenario
 function Game.DebugLoadScenario(level, scenario, startpoint, player, param5) end
@@ -367,7 +367,7 @@ function Game.ExistsLogicCamera(param1) end
 function Game.ExportPackAnyTimeReferencedFilesPfg() end
 
 ---UNKNOWN. Seemingly useless
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.ExtraDebugAllowed() return false end
 
@@ -597,7 +597,7 @@ function Game.GetSecondaryPlayer() end
 function Game.GetPlayer() end
 
 ---Returns the default player name
----@return string # Always `"Samus"`
+---@return "Samus"
 function Game.GetDefaultPlayerName() return "Samus" end
 
 ---Dummied.
@@ -647,7 +647,7 @@ function Game.GetFirstInstanceOfCharClass(param1) end
 function Game.GetFixedStepTime() end
 
 ---Useless.
----@return string # Always `""`
+---@return ""
 ---@deprecated
 function Game.GetForcedTooltip() return "" end
 
@@ -761,12 +761,12 @@ function Game.GetNavMeshGeneratorDebugBreakableTileIndex() end
 
 ---UNKNOWN. Seemingly useless
 ---@param param1 string
----@return string # Always `""`
+---@return ""
 function Game.GetNextForcedTooltip(param1) end
 
 ---UNKNOWN. Seemingly useless
 ---@param param1 string
----@return string # Always `""`
+---@return ""
 function Game.GetPrevForcedTooltip(param1) end
 
 ---UNKNOWN
@@ -787,7 +787,7 @@ function Game.GetPerformanceInfoEnabled() end
 function Game.GetPlayerAbilityStatus() end
 
 ---Returns the name of the player blackboard section
----@return string # Always `"PLAYER"`
+---@return "PLAYER"
 function Game.GetPlayerBlackboardSectionName() return "PLAYER" end
 
 ---UNKNOWN. Looks possibly useful
@@ -876,7 +876,7 @@ function Game.GetSelectedAI() end
 function Game.GetSelecetedAIAttacks() end
 
 ---UNKNOWN. Seemingly useless
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.GetSetFrontByPass() return false end
 
@@ -1063,7 +1063,7 @@ function Game.IsCommitedGameMovie(param1) end
 function Game.IsCutscenePlaying() end
 
 ---UNKNOWN. Seemingly useless
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsDebug() return false end
 
@@ -1141,7 +1141,7 @@ function Game.IsInAttractMode() end
 function Game.IsInFadeOut() end
 
 ---Returns whether the game is a release build. Useless for modders.
----@return boolean # Always `true`
+---@return true
 ---@deprecated
 function Game.IsInFINAL() return true end
 
@@ -1150,32 +1150,32 @@ function Game.IsInFINAL() return true end
 function Game.IsInGameMusicStateLocked() end
 
 ---Interestingly isn't dummied, but is useless.
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsInPS3() return false end
 
 ---Interestingly isn't dummied, but is useless.
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsInSteam() return false end
 
 ---Interestingly isn't dummied, but is useless.
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsInSTEAM_PC_FINAL_RETAIL() return false end
 
 ---Interestingly isn't dummied, but is useless.
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsInVerticalMode() return false end
 
 ---Interestingly isn't dummied, but is useless.
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsInWIN32() return false end
 
 ---Interestingly isn't dummied, but is useless.
----@return boolean # Always `false`
+---@return false
 ---@deprecated
 function Game.IsInXBOX() return false end
 
@@ -1237,3 +1237,687 @@ function Game.IsSFXEnabled() end
 ---@return boolean
 function Game.IsVibrationAvailableFromSystem() end
 
+---UNKNOWN
+function Game.KillAllEnemies() end
+
+---UNKNOWN
+function Game.KillCurrentBoss() end
+
+---UNKNOWN
+function Game.KillEmmy() end
+
+---UNKNOWN
+function Game.KillPlayer() end
+
+---UNKNOWN
+---@param spawngroup entityID
+function Game.KillSpawnGroupEnemies(spawngroup) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.LaunchAquaGateOpening(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.LaunchCutscene(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 integer
+function Game.LaunchCutscene(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 boolean
+---@param param4 boolean
+---@param param5 boolean
+---@param param6 boolean
+---@param param7 boolean
+---@param param8 string
+---@param param9 string
+---@param param10 float
+---@param param11 float
+---@param param12 float
+---@see msemainmenu.lua - only usage
+function Game.LaunchCutsceneFromPlaythrough(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12) end
+
+---UNKNOWN
+---@param param1 string
+function Game.LaunchCutsceneSyncLoad(param1) end
+
+---UNKNOWN
+function Game.LaunchEmmyZoneTuto() end
+
+---Seems to be bugged. Do not use.
+---@deprecated
+function Game.LightFadeIn() end
+
+---Seems to be bugged. Do not use.
+---@deprecated
+function Game.LightFadeOut() end
+
+---UNKNOWN. Seemingly useless.
+---@return false
+function Game.LoadEnemyDef() return false end
+
+---Loads a game from the specified source
+---@param source save_source
+---@return boolean
+function Game.LoadGame(source) end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.LoadGameDataPackage(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.LoadGameDataTo(param1) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 integer
+---@return unknown
+function Game.LoadGameEnding(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.LoadGameFromAssets(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.LoadGameFromAssetsWithoutLoad(param1) end
+
+---Reloads the last saved checkpoint
+function Game.LoadGameFromCheckpoint() end
+
+---UNKNOWN
+---@param sPlaythrough string
+---@param sCheckpoint string
+---@return boolean
+function Game.LoadGameFromPlaythrough(sPlaythrough, sCheckpoint) end
+
+---Dummied.
+---@deprecated
+function Game.LoadGraphicsCfg() end
+
+---Dummied.
+---@deprecated
+function Game.LoadLanguageCfg() end
+
+---UNKNOWN
+---@param param1 string
+---@return boolean
+function Game.LoadPackSync(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+---@return boolean
+function Game.LoadProfile(param1, param2) end
+
+---Loads a scenario at the given spawnpoint. Can be used as a means of teleporting to another scenario
+---@param level levelid
+---@param scenario scenarioid
+---@param startpoint spawnpoint
+---@param player ""
+---@param param5 integer? # Unknown, may be optional. Usually set to `1`
+function Game.LoadScenario(level, scenario, startpoint, player, param5) end
+
+---Dummied.
+---@deprecated
+function Game.LoadScreenCfg() end
+
+---UNKNOWN. May be leftover from SR
+function Game.LockAeionReserveTank() end
+
+---UNKNOWN
+---@param param1 string
+function Game.LockAttacks(param1) end
+
+---Useless in vanilla.
+---@param _ integer
+---@param message string
+---@deprecated
+function Game.LogError(_, message) end
+
+---Useless in vanilla. A simple patch exists which makes this function call the SDK's actual logging function. Useful for debug logging when installed.
+---@param _ integer # Ignored by the patched function
+---@param message string # The message to log
+function Game.LogWarn(_, message) end
+
+---UNKNOWN. May be useless without modification
+function Game.LogLoadedCharClasses() end
+
+---UNKNOWN. May be useless without modification
+function Game.LogLoadedPacks() end
+
+---UNKNOWN. May be useless without modification
+function Game.LogLUALibraries() end
+
+---UNKNOWN. May be useless without modification
+---@param param1 string
+function Game.LogPackFileReferences(param1) end
+
+---Dummied.
+---@deprecated
+function Game.LogPackNoCurrentlyUsedPfgFiles() end
+
+---Dummied.
+---@deprecated
+function Game.LogPackUnusedPfgFiles() end
+
+---UNKNOWN
+---@return true
+function Game.MemoryStatsAllowed() return true end
+
+---Dummied.
+---@deprecated
+function Game.MetroidRadarForceStateOnBegin() end
+
+---Dummied.
+---@deprecated
+function Game.MetroidRadarForceStateOnEnd() end
+
+---Dummied.
+---@deprecated
+function Game.MinimapOnLevelStartUsingElevator() end
+
+---UNKNOWN
+---@param param1 float
+function Game.OneStepFaderUpdate(param1) end
+
+---UNKNOWN
+function Game.OnGunsPropertiesChanged() end
+
+---UNKNOWN
+---@param param1 string
+function Game.OnMeleeTutorial(param1) end
+
+---Dummied.
+---@deprecated
+function Game.OnSuitCutsceneLaunched() end
+
+---UNKNOWN
+---@param entity entityID
+function Game.OnTeleportApproached(entity) end
+
+---Dummied. :(
+---@deprecated
+function Game.OpenIngameMenu() end
+
+---Dummied.
+---@deprecated
+function Game.OverrideResourceTextures() end
+
+---UNKNOWN
+---@param param1 float
+function Game.OverrideScenarioRequestPostponeFadeInTime(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.OverrideScenarioRequestUseTransitioner(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.OverrideSoundListener(param1) end
+
+---Dummied.
+---@deprecated
+function Game.PackSanityCheck() end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.PauseEnvironment(param1) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.PauseGameMovie(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.PauseMusicAndSounds(param1) end
+
+---UNKNOWN
+function Game.PausePadVibration() end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.PauseSounds(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.PickUpAllDroppedItems(param1) end
+
+---UNKNOWN
+---@param param1 table # Table structure completely unknown
+function Game.PlayCameraAnimation(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.PlayCameraFXPreset(param1) end
+
+---UNKNOWN
+---@param param1 string[]
+---@param param2 boolean
+---@param param3 float
+---@param param4 float
+---@param param5 string
+---@return boolean
+function Game.PlayCaptionSoundList(param1, param2, param3, param4, param5) end
+
+---Starts playing the appropriate music for the current area
+function Game.PlayCurrentEnvironmentMusic() end
+
+---UNKNOWN
+function Game.PlayCurrentEnvironmentSound() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 float
+---@param param4 integer
+function Game.PlayCustomMusic(param1, param2, param3, param4) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+---@param param3 boolean
+---@param param4 boolean
+---@param param5 boolean
+---@param param6 boolean
+---@param param7 string
+---@param param8 string
+---@param param9 float
+---@param param10 float
+---@param param11 float
+function Game.PlayCutsceneOnScenarioLoaded(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 vector3
+function Game.PlayDirectionalCameraFXPreset(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 float
+---@param param4 float
+---@param param5 boolean
+function Game.PlayEntityGUILoop(param1, param2, param3, param4, param5) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 float
+---@param param4 float
+function Game.PlayEntityGUISound(param1, param2, param3, param4) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 boolean
+function Game.PlayEntityLoop(param1, param2, param3, param4, param5, param6, param7) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 string?
+function Game.PlayEntitySound(param1, param2, param3, param4, param5, param6, param7) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 float
+function Game.PlayEntitySoundContinueOnDead(param1, param2, param3, param4, param5, param6) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 boolean
+---@param param3 boolean
+---@return userdata
+function Game.PlayFullScreenMovie(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.PlayGameMovie(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 float
+---@param param4 boolean
+---@param param5 float
+function Game.PlayGUISound(param1, param2, param3, param4, param5) end
+
+---UNKNOWN
+---@param param1 string
+function Game.PlayLoadingMusic(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 integer
+---@param param3 float
+function Game.PlayLoadingStream(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean?
+---@param param3 boolean?
+---@param param4 boolean?
+---@param param5 integer?
+function Game.PlayMusic(param1, param2, param3, param4, param5) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean?
+---@param param3 boolean?
+---@param param4 boolean?
+---@param param5 integer?
+function Game.PlayMusicFromLoopStart(param1, param2, param3, param4, param5) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 boolean?
+---@param param4 boolean?
+---@param param5 boolean?
+---@param param6 integer?
+function Game.PlayMusicFromSecond(param1, param2, param3, param4, param5, param6) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 string
+---@param param3 integer
+---@param param4 integer
+---@param param5 integer
+---@param param6 float
+---@param param7 float
+---@param param8 integer
+function Game.PlayMusicStream(param1, param2, param3, param4, param5, param6, param7, param8) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 float
+---@param param8 float
+function Game.PlayPosSound(param1, param2, param3, param4, param5, param6, param7, param8) end
+
+---UNKNOWN
+---@param param1 string
+function Game.PlayPresetSound(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 table
+function Game.PlayRelativeCameraAnimation(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 float
+---@param param4 boolean
+---@param param5 float
+function Game.PlaySound(param1, param2, param3, param4, param5) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+---@param param3 float
+---@param param4 float
+function Game.PlayStream(param1, param2, param3, param4) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.PlayVibration(param1, param2) end
+
+---Pushes the setup onto the setup stack.
+---Highest setup on the stack that applies to a subarea is the setup it will load.
+---@param setup string
+---@param param2 boolean
+---@param param3 boolean?
+function Game.PushSetup(setup, param2, param3) end
+
+---Pops the setup from the setup stack.
+---Highest setup on the stack that applies to a subarea is the setup it will load.
+---@param setup string
+---@param param2 boolean
+---@param param3 boolean?
+function Game.PopSetup(setup, param2, param3) end
+
+---UNKNOWN
+---@param param1 boolean
+---@param param2 boolean?
+function Game.ResetToDefaultSetup(param1, param2) end
+
+---Similar to PushSetup. Seemingly unused in vanilla?
+---@param setup string
+---@param subarea string
+---@param param3 boolean
+---@param param4 boolean?
+---@see Game.PushSetup
+function Game.PushSubareaSetup(setup, subarea, param3, param4) end
+
+---Similar to PopSetup. Seemingly unused in vanilla?
+---@param setup string
+---@param subarea string
+---@param param3 boolean
+---@param param4 boolean?
+---@see Game.PopSetup
+function Game.PopSubareaSetup(setup, subarea, param3, param4) end
+
+---UNKNOWN
+---@param subarea string
+---@param param2 boolean
+---@param param3 boolean?
+function Game.ResetSubareaToDefaultSetup(subarea, param2, param3) end
+
+---UNKNOWN
+function Game.QuitGame() end
+
+---UNKNOWN
+---@param entity entityID
+function Game.RecoverEntityLife(entity) end
+
+---UNKNOWN
+function Game.RecoverMissiles() end
+
+---UNKNOWN
+function Game.RecoverPlayerLife() end
+
+---UNKNOWN
+function Game.RecoverSpecialEnergy() end
+
+---UNKNOWN
+function Game.RefreshSelectedAIAttackPreset() end
+
+---Reinitializes the player according to the blackboard.
+---Updates suits, special inputs (e.g. speed booster), etc.
+---Puts the player in an idle and actionable state.
+function Game.ReinitPlayerFromBlackboard() end
+
+---UNKNOWN
+function Game.ReleaseAllLUALibraries() end
+
+---UNKNOWN
+---@param param1 string
+function Game.ReleaseLibrary(param1) end
+
+---Dummied.
+---@deprecated
+function Game.ReloadBehaviorTrees() end
+
+---UNKNOWN
+function Game.ReloadCurrentScenario() end
+
+---UNKNOWN
+---@return boolean
+function Game.ReloadLuaScripts() end
+
+---UNKNOWN
+function Game.RemoveBossCameraCtrl() end
+
+---UNKNOWN
+---@param entity entityID
+function Game.RemoveEntityToUpdateInCutscene(entity) end
+
+---UNKNOWN
+---@param entity entityID
+---@param pct float
+function Game.RemoveLifePctToEntity(entity, pct) end
+
+---UNKNOWN
+---@param spawn spawnpoint
+function Game.RemoveSpawnPointEntityToUpdateInCutscene(spawn) end
+
+---UNKNOWN
+function Game.RequestExit() end
+
+---UNKNOWN
+function Game.ResetAmiibosTimestamp() end
+
+---UNKNOWN
+function Game.ResetAndStopUpdateSpecialEnergy() end
+
+---UNKNOWN
+function Game.ResetCameraCtrl() end
+
+---UNKNOWN
+function Game.ResetFader() end
+
+---Dummied.
+---@deprecated
+function Game.ResetKeyboardPresetToDefault() end
+
+---UNKNOWN
+function Game.ResetOverrideSoundListener() end
+
+---UNKNOWN
+function Game.ResetProfileBlackboard() end
+
+---UNKNOWN
+---@param entity entityID
+function Game.ResetSpawnGroup(entity) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 boolean
+function Game.ResetTileGroup(param1, param2) end
+
+---UNKNOWN
+function Game.ResetTotalPlayTime() end
+
+---UNKNOWN
+function Game.RestorePadVibration() end
+
+---UNKNOWN. Seemingly useless
+---@param param1 string
+function Game.RestoreResourceTextures(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@return userdata
+function Game.RetrievePlaythrough(param1) end
+
+---UNKNOWN
+function Game.RetrieveSlotsInfo() end
+
+---UNKNOWN
+---@param entity entityID
+function Game.SaturateSpawnGroup(entity) end
+
+---UNKNOWN
+function Game.SaveDataToNewDevice() end
+
+---Saves the game with the given parameters
+---@param eDestination save_destination
+---@param sCheckpointKey string
+---@param sStartPointId spawnpoint
+---@param bForce boolean
+---@return boolean
+function Game.SaveGame(eDestination, sCheckpointKey, sStartPointId, bForce) end
+
+---UNKNOWN
+---@param sSnapshotId string
+---@param sCheckpointKey string
+---@param sStartPointId spawnpoint
+---@param bForce boolean
+function Game.SaveSnapshotToCheckpoint(sSnapshotId, sCheckpointKey, sStartPointId, bForce) end
+
+---UNKNOWN
+---@param sSnapshotId string
+---@return boolean
+function Game.SaveGameToSnapshot(sSnapshotId) end
+
+---UNKNOWN
+function Game.SaveGameComplete() end
+
+---Dummied.
+---@deprecated
+function Game.SaveGraphicsCfg() end
+
+---Dummied.
+---@deprecated
+function Game.SaveKeyboardCfg() end
+
+---Dummied.
+---@deprecated
+function Game.SaveLanguageCfg() end
+
+---Dummied.
+---@deprecated
+function Game.SaveNavMesh() end
+
+---UNKNOWN
+function Game.SaveNewGame() end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SaveProfile(param1) end
+
+---Dummied.
+---@deprecated
+function Game.SaveScreenCfg() end
+
+---Dummied.
+---@deprecated
+function Game.ScanVisitDiscoverEverything() end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.ScenarioAllowsToStopMusicInPlayerDeath(param1) end
+
+---UNKNOWN
+function Game.SelectAnAvailableAbility() end
+
+---UNKNOWN
+function Game.SelectCloserAI() end
+
+---UNKNOWN. Seems interesting
+---@param entity entityID
+---@param param2 string
+---@param param3 string
+---@param param4 boolean
+---@param param5 string
+function Game.SendMsgToEntity(entity, param2, param3, param4, param5) end
+
+-- TODO: `Set` onwards

@@ -16,7 +16,10 @@ end
 
 ---@alias path string A file path, starting from romfs root. Use the `.lua` file extension even for `.lc` files.
 
----@alias argstring string A string indicating a type or sequence of types
+---@alias save_source "current" | "checkpoint" | "savedatacache" | "savedata"
+---@alias save_destination "checkpoint" | "savedata"
+
+---@alias argstring # A string indicating a type or sequence of types
 ---| 'b' # bool
 ---| 'd' # double
 ---| 'f' # float
@@ -41,10 +44,10 @@ end
 
 ---@alias callback string
 
----@alias levelid string
+---@alias levelid
 ---| '"c10_samus"''
 
----@alias scenarioid string
+---@alias scenarioid
 ---| '"s010_cave"'
 ---| '"s020_magma"'
 ---| '"s030_baselab"'
@@ -60,7 +63,7 @@ end
 ---@alias GameObjectType userdata
 
 --#region Actors/Components
----@alias componentID string
+---@alias componentID
 ---| '"MODELUPDATER"'
 ---| '"ABILITY"'
 ---| '"ACTIVATABLE_BY_PROJECTILE"'
