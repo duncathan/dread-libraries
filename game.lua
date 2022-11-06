@@ -2482,4 +2482,285 @@ function Game.SetTotalPlayTime(param1) end
 ---@param param1 boolean
 function Game.SetXparasite(param1) end
 
--- TODO: the rest
+---UNKNOWN
+---@param param1 boolean
+---@param param2 integer?
+---@param param3 integer?
+function Game.ShowEndGameCredits(param1, param2, param3) end
+
+---UNKNOWN
+function Game.ShowFPS() end
+
+---UNKNOWN
+function Game.ShowScenario() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 string
+---@param param4 string
+function Game.ShowVirtualKeyboard(param1, param2, param3, param4) end
+
+---UNKNOWN
+---@param entity entityID
+---@return string
+function Game.SpawnEntity(entity) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 string
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 float
+---@param param8 float
+function Game.SpawnUnlinkedEffect(param1, param2, param3, param4, param5, param6, param7, param8) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 float
+function Game.StartForceDarkness(param1, param2, param3) end
+
+---UNKNOWN
+function Game.StartMetrics() end
+
+---Dummied.
+---@deprecated
+function Game.StartProfiling() end
+
+---Starts the prologue cutscene
+---@param param1 string
+---@param param2 string
+---@param param3 string
+---@param param4 string
+---@param param5 integer
+function Game.StartPrologue(param1, param2, param3, param4, param5) end
+
+---Dummied.
+---@deprecated
+function Game.SteamClearAchievements() end
+
+---UNKNOWN
+function Game.StopAllSFXSounds() end
+
+---UNKNOWN
+function Game.StopCameraAnimation() end
+
+---UNKNOWN
+---@param param1 string
+function Game.StopCameraFXPreset(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+---@param param2 float?
+function Game.StopCurrentMusicTrack(param1, param2) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 float
+function Game.StopEntityFor(entity, param2) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 float
+function Game.StopEntityPositionalSound(entity, param2, param3) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 float
+function Game.StopEntitySound(entity, param2, param3) end
+
+---UNKNOWN
+function Game.StopEnvironmentSound() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+function Game.StopForceDarkness(param1, param2) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.StopGameMovie(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+---@param param2 string?
+function Game.StopMusic(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string?
+function Game.StopMusicPreset(param1, param2) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 float?
+---@param param3 integer?
+function Game.StopMusicStream(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 float
+---@param param2 boolean?
+---@param param3 string?
+function Game.StopMusicWithFade(param1, param2, param3) end
+
+---UNKNOWN
+function Game.StopPadVibration() end
+
+---Dummied.
+---@deprecated
+function Game.StopProfiling() end
+
+---UNKNOWN
+---@param param1 string?
+function Game.StopStreamSound(param1) end
+
+---UNKNOWN
+function Game.SwitchDoubleJump() end
+
+---UNKNOWN
+function Game.SwitchPlayerLifeLocked() end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SwitchSelectedAIAttack(param1) end
+
+---UNKNOWN
+function Game.SwitchSelectedAIAttackPreset() end
+
+---UNKNOWN
+function Game.SwitchSoundMode() end
+
+---UNKNOWN
+function Game.SwitchSpaceJump() end
+
+---UNKNOWN
+---@param entity entityID
+---@param destination entityID
+---@param param3 boolean # possibly force?
+function Game.Teleport(entity, destination, param3) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 boolean
+---@param param4 float
+---@param param5 boolean
+---@param param6 float
+---@param param7 float
+---@param param8 float
+function Game.TeleportEntityToLandmark(entity, param2, param3, param4, param5, param6, param7, param8) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 float
+---@param param3 boolean
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 float
+function Game.TeleportEntityToRawPos(entity, param2, param3, param4, param5, param6, param7) end
+
+---Teleports the entity to the given startpoint
+---@param entity entityID
+---@param startpoint spawnpoint
+---@param fadetime float
+---@param param4 boolean # possibly force?
+function Game.TeleportEntityToStartPoint(entity, startpoint, fadetime, param4) end
+
+---UNKNOWN
+function Game.ToggleFixedStepTime() end
+
+---UNKNOWN
+function Game.ToggleFPS() end
+
+---UNKNOWN
+function Game.ToggleHideHudAlways() end
+
+---UNKNOWN
+function Game.TogglePause() end
+
+---UNKNOWN
+function Game.ToggleSilentMusic() end
+
+---Dummied.
+---@deprecated
+function Game.ToggleWindowResolution() end
+
+---Dummied.
+---@deprecated
+function Game.TransferGameProgress() end
+
+---UNKNOWN
+function Game.TransitionFadeIn() end
+
+---UNKNOWN
+function Game.TransitionFadeOut() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 integer?
+function Game.UnbindLightFromConstantAlpha(param1, param2) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.UnCommitGameMovie(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+---@return boolean
+function Game.UnloadPack(param1, param2) end
+
+---UNKNOWN
+function Game.UnlockAllRewards() end
+
+---UNKNOWN
+function Game.UnlockAmiiboMenu() end
+
+---UNKNOWN
+function Game.UpdateConfigFile() end
+
+---Dummied.
+---@deprecated
+function Game.UpdateCurrentMinimapCellIcon() end
+
+---Dummied.
+---@deprecated
+function Game.UpdateCurrentMinimapCellIconState() end
+
+---Dummied.
+---@deprecated
+function Game.UpdateLegendSpecialEnergyBestowalStatue() end
+
+---Dummied.
+---@deprecated
+function Game.UpdateLegendSpecialEnergyCloud() end
+
+---Dummied.
+---@deprecated
+function Game.UpdateSpecifiedMinimapCellIcon() end
+
+---Dummied.
+---@deprecated
+function Game.UpdateSpecifiedMinimapCellIconState() end
+
+---Seemingly useless.
+---@return false
+---@deprecated
+function Game.VersionNumberAllowed() return false end
+
+---Writes the property to the game blackboard
+---@param prop string
+---@param value boolean
+function Game.WriteToGameBlackboard(prop, value) end
+
+---Writes the property to the game blackboard
+---@param section any
+---@param prop any
+---@param value any
+function Game.WriteToGameBlackboardSection(section, prop, value) end
