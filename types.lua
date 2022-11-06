@@ -19,6 +19,23 @@ end
 ---@alias save_source "current" | "checkpoint" | "savedatacache" | "savedata"
 ---@alias save_destination "checkpoint" | "savedata"
 
+---@alias language
+---| "MSE_ENGLISH"
+---| "EU_ENGLISH"
+---| "EU_SPANISH"
+---| "EU_FRENCH"
+---| "EU_GERMAN"
+---| "EU_DUTCH"
+---| "EU_ITALIAN"
+---| "US_ENGLISH"
+---| "US_FRENCH"
+---| "US_SPANISH"
+---| "JAPANESE"
+---| "KOREAN"
+---| "TRADITIONAL_CHINESE"
+---| "SIMPLIFIED_CHINESE"
+---| "RUSSIAN"
+
 ---@alias argstring # A string indicating a type or sequence of types
 ---| 'b' # bool
 ---| 'd' # double

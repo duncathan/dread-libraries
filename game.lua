@@ -563,7 +563,7 @@ function Game.GetCurrentGameModeID() end
 function Game.GetPreviousGameMode() end
 
 ---Returns the currently enabled language
----@return string
+---@return language
 function Game.GetCurrentLanguage() end
 
 ---UNKNOWN
@@ -1920,4 +1920,566 @@ function Game.SelectCloserAI() end
 ---@param param5 string
 function Game.SendMsgToEntity(entity, param2, param3, param4, param5) end
 
--- TODO: `Set` onwards
+---UNKNOWN
+---@param entity entityID
+---@param param2 any
+function Game.SetActorCulling(entity, param2) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 boolean
+---@param param4 boolean
+function Game.SetActorFXActive(entity, param2, param3, param4) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 boolean
+---@param param4 boolean
+---@param param5 boolean
+function Game.SetActorFXEnabled(entity, param2, param3, param4, param5) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 boolean
+---@param param7 boolean
+function Game.SetActorFXFadeIntensity(entity, param2, param3, param4, param5, param6, param7) end
+
+---Moves the actor to the given position
+---@param entity entityID
+---@param pos vector3
+---@param param3 boolean # possibly force?
+function Game.SetActorPosition(entity, pos, param3) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 boolean
+function Game.SetActorSelectedFXEnabled(entity, param2) end
+
+---Moves the actor to the given position with the given rotation
+---@param entity entityID
+---@param pos vector3
+---@param ang vector3
+---@param param4 boolean # possibly force?
+function Game.SetActorTransform(entity, pos, ang, param4) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 float
+---@param param3 float
+---@param param4 string
+function Game.SetActorVolumeOverride(entity, param2, param3, param4) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 string
+---@param type argstring
+---@param param5 any # type indicated by `type` param
+function Game.SetAIBlcProb(entity, param2, param3, type, param5) end
+
+---Dummied.
+---@deprecated
+function Game.SetAppGraphicsCfg() end
+
+---Dummied.
+---@deprecated
+function Game.SetAppLanguageCfg() end
+
+---Dummied.
+---@deprecated
+function Game.SetAppScreenCfg() end
+
+---UNKNOWN
+---@param callback callback
+function Game.SetAquaGateOpeningEventEndLUACallback(callback) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+function Game.SetArenaDefaultSpawnGroup(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+function Game.SetArenaNewRandomSelectedSpawnGroup(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetBreakableTileWeaponHitLocked(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param type argstring
+---@param value any
+---@return boolean
+function Game.SetCameraCtrlValue(param1, type, value) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 table
+function Game.SetCameraCtrlValues(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+function Game.SetCameraEnemy(param1) end
+
+---UNKNOWN
+---@param param1 table
+---@return table
+function Game.SetCameraValues(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetCaptionsAllowed(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetCheckpointTriggersEnabled(param1) end
+
+---UNKNOWN
+---@param param1 string
+function Game.SetCinematicMode(param1) end
+
+---UNKNOWN. Appears to be bugged
+---@deprecated
+function Game.SetClipPlane() end
+
+---Locks the camera in place?
+---@param collision_camera string
+---@param locked boolean
+function Game.SetCollisionCameraLocked(collision_camera, locked) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 float
+---@param param4 float
+function Game.SetCollisionCameraTransitionOverride(param1, param2, param3, param4) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetControlledAI(param1) end
+
+---Sets the ZDR Cooldown flag to the provided value
+---@param active boolean
+function Game.SetCooldownFlag(active) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean?
+function Game.SetCurrentEnvironmentPreset(param1, param2) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetCurrentEnvMultiplier(param1) end
+
+---Sets the current language
+---@param lang language
+function Game.SetCurrentLanguage(lang) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 table
+function Game.SetCutsceneExtraActorVisibilityPerTake(entity, param2, param3) end
+
+---UNKNOWN
+---@param path string
+function Game.SetDefaultPath(path) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.SetDroppedItemAttractionAcceleration(param1) end
+
+---UNKNOWN
+function Game.SetEmmyPhase1() end
+
+---UNKNOWN
+function Game.SetEmmyPhase2() end
+
+---Seemingly useless
+---@return false
+---@deprecated
+function Game.SetEnemyDefBlcValues() return false end
+
+---Seemingly useless
+---@return false
+---@deprecated
+function Game.SetEnemyDefValue() return false end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetEnemyLifeLocked(param1) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 float
+function Game.SetEntityAction(entity, param2, param3) end
+
+---Sets the entity's life to the provided value
+---@param entity entityID
+---@param life float
+function Game.SetEntityLife(entity, life) end
+
+---Sets the entity's life to the provided fraction of its maximum
+---@param entity entityID
+---@param pct float # Between `0.0` and `1.0`
+function Game.SetEntityLifePct(entity, pct) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 float
+function Game.SetEntitySoundPitch(entity, param2, param3) end
+
+---UNKNOWN
+---@param entity entityID
+---@param param2 string
+---@param param3 float
+function Game.SetEntitySoundVol(entity, param2, param3) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetEnvironmentVolume(param1) end
+
+---Seemingly useless.
+---@param param1 string
+---@deprecated
+function Game.SetForcedTooltip(param1) end
+
+---Seemingly useless.
+---@param param1 boolean
+---@deprecated
+function Game.SetForceHeadphonesPlugged(param1) end
+
+---Dummied.
+---@deprecated
+function Game.SetForceRoundRobinForNonCulledEntities() end
+
+---If set to true, allows the player to skip all cutscenes, regardless of whether they've been watched or are normally skippable.
+---@param enable boolean
+function Game.SetForceSkipCutscenes(enable) end
+
+---Does this work??
+---@param param1 float
+function Game.SetFramerate(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetFreeCamLockSubAreas(param1) end
+
+---Likely a leftover from SR
+---@param param1 boolean
+---@deprecated
+function Game.SetGameCompletedOnRidleyDead(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.SetGameModeSelectButtonEnabled(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.SetGameModeStartButtonEnabled(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.SetGameModeStartButtonForbidden(param1, param2) end
+
+---UNKNOWN
+---@param param1 integer
+---@return unknown
+function Game.SetGameRecorderMode(param1) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetGlobalPitch(param1) end
+
+---Seemingly useless.
+---@param param1 float
+---@deprecated
+function Game.SetHeadphonesMultiplier(param1) end
+
+---Sets the IAmACheater flag, which seems to have some kind of debug effects.
+function Game.SetIAmACheater() end
+
+---UNKNOWN. Possibly debug menu related
+---@param param1 string
+function Game.SetIngameMenuNextGUIPath(param1) end
+
+---UNKNOWN. Possibly debug menu related
+---@param param1 boolean
+function Game.SetInGameMenuPausesMusic(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean?
+function Game.SetInGameMusicState(param1, param2) end
+
+---Sets the amount of the given item in the inventory to 1.0
+---@param playername string # Use `Game.GetPlayerName()` for this
+---@param item_id string
+function Game.SetItem(playername, item_id) end
+
+---Sets the amount of the given item in the inventory
+---@param playername string # Use `Game.GetPlayerName()` for this
+---@param item_id string
+---@param amount float
+function Game.SetItemAmount(playername, item_id, amount) end
+
+---Dummied.
+---@deprecated
+function Game.SetKeyboardPreset() end
+
+---Dummied.
+---@deprecated
+function Game.SetKeyboardPresetCfg() end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+---@param param3 float
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 float
+function Game.SetLandmarkTransform(param1, param2, param3, param4, param5, param6, param7) end
+
+---UNKNOWN
+---@param lang language
+function Game.SetLanguageAndRegionDebug(lang) end
+
+---UNKNOWN
+---@param param1 string
+function Game.SetLoadingMode(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetLoadingScreen(param1) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.SetLoadScreenType(param1) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetLowPassFilterCutOff(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetMapMenuPausesMusic(param1) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetMasterVolume(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 string
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 float
+function Game.SetMaterialProperty(param1, param2, param3, param4, param5, param6, param7) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+---@param param3 string
+---@param param4 float
+---@param param5 float
+---@param param6 float
+---@param param7 float
+---@param param8 float
+---@param param9 float
+---@param param10 float
+---@param param11 float
+---@param param12 float
+function Game.SetMaterialProperty(param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12) end
+
+---Likely leftover from SR
+---@param param1 float
+---@deprecated
+function Game.SetMetroidCameraHorizontalOffset(param1) end
+
+---Likely leftover from SR
+---@param param1 float
+---@deprecated
+function Game.SetMetroidCameraVerticalOffset(param1) end
+
+---Marks the region bounded by the provided logicshape as visible on the map
+---@param logicshape entityID
+function Game.SetMinimapRegionVisible(logicshape) end
+
+---Marks the region bounded by the provided logicshape as visited on the map
+---@param logicshape entityID
+function Game.SetMinimapRegionVisited(logicshape) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetMusicAndSoundsInMenu(param1) end
+
+---UNKNOWN
+---@param param1 float
+---@param param2 float
+function Game.SetMusicVolume(param1, param2) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetPadVibrationEnabled(param1) end
+
+---Seemingly useless.
+---@param param1 float
+---@param param2 float
+---@param param3 float
+---@deprecated
+function Game.SetPadVibrationFor(param1, param2, param3) end
+
+---Enables some debug information
+---@param param1 boolean
+function Game.SetPerformanceInfoEnabled(param1) end
+
+---UNKNOWN
+function Game.SetPlayerInteractMovementState() end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetPlayerMaxLife(param1) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetPlayerMaxLifeOverride(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetPlayerSpecialEnergyLocked(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetPostProcessEnabled(param1) end
+
+---Seemingly useless.
+---@param param1 boolean
+---@deprecated
+function Game.SetRecoveryModeTemporarilyDisabled(param1) end
+
+---UNKNOWN
+---@param mode RevealTilesMode
+function Game.SetRevealTilesMode(mode) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetSafeFarPlaneFactor(param1) end
+
+---UNKNOWN
+---@param param1 integer
+function Game.SetSamusWalkMode(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetSaveDataDummyMode(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 string
+function Game.SetScenarioBlackboardSectionID(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.SetScenarioItemEnabledByName(param1, param2) end
+
+---UNKNOWN
+---@param param1 integer
+---@param param2 integer
+function Game.SetSceneBrightness(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.SetSceneGroupEnabledByName(param1, param2) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetSendReports(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetSFXMuted(param1) end
+
+---UNKNOWN
+---@param param1 float
+---@param param2 float
+function Game.SetSFXVolume(param1, param2) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetShowingRollingText(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetSkippingQueuedCutscenes(param1) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetSlomo(param1) end
+
+---UNKNOWN
+---@param param1 float
+---@param param2 float
+---@param param3 string
+function Game.SetSlomoCustom(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 float
+---@param param2 float
+function Game.SetSlomoFor(param1, param2) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetSoundListenerFactor(param1) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 float
+function Game.SetStat(param1, param2) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+---@param param3 boolean
+function Game.SetSubAreaEnabled(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 boolean
+---@param param2 boolean
+---@param param3 boolean
+function Game.SetSubAreaEnvironmentLocked(param1, param2, param3) end
+
+---UNKNOWN
+---@param param1 string
+---@param param2 boolean
+function Game.SetSubAreaLocked(param1, param2) end
+
+---UNKNOWN
+---@param transition "None" | "Camera" | "Fade" | "FakeFade"
+function Game.SetSubAreasPreferredTransitionType(transition) end
+
+---UNKNOWN
+---@param param1 float
+function Game.SetTotalPlayTime(param1) end
+
+---UNKNOWN
+---@param param1 boolean
+function Game.SetXparasite(param1) end
+
+-- TODO: the rest
